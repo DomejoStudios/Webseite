@@ -1,11 +1,15 @@
 import React, { useState, useEffect, useRef } from 'react';
-import useIntersectionObserver from './intersector.jsx';
+import useIntersectionObserver from './intersector';
 
+interface SlideshowProps {
+  slides: string[];
+  interval?: number;
+}
 
-const Slideshow = ({ slides, interval = 3000 }) => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const slideInterval = useRef(null);
-  const [containerRef, isContainerVisible] = useIntersectionObserver({ threshold: 0.1 });
+const Slideshow: React.FC<SlideshowProps> = ({ slides, interval = 3000 }) => {
+  const [currentSlide, setCurrentSlide] = useState<number>(0);
+  const slideInterval = useRef<ReturnType<typeof setInterval> | null>(null);  // Use ReturnType<typeof setInterval>
+  const [containerRef, isContainerVisible] = useIntersectionObserver<HTMLDivElement>({ threshold: 0.1 });
 
   // Function to start the slideshow
   const startSlideShow = () => {
@@ -16,7 +20,9 @@ const Slideshow = ({ slides, interval = 3000 }) => {
 
   // Function to pause the slideshow
   const pauseSlideShow = () => {
-    clearInterval(slideInterval.current);
+    if (slideInterval.current) {
+      clearInterval(slideInterval.current);
+    }
   };
 
   // Automatically change slides at a set interval
@@ -25,7 +31,7 @@ const Slideshow = ({ slides, interval = 3000 }) => {
 
     // Cleanup on unmount
     return () => pauseSlideShow();
-  }, [interval]); // Remove currentSlide from the dependency array
+  }, [interval]);
 
   // Move to the next slide
   const nextSlide = () => {

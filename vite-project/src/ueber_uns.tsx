@@ -1,21 +1,25 @@
-import React from 'react';
-import useIntersectionObserver from './intersector.jsx';
+import useIntersectionObserver from './intersector';
 
 export default function UeberUns() {
-  const [ref1, isVisible1] = useIntersectionObserver({ threshold: 0.1 });
-  const [ref2, isVisible2] = useIntersectionObserver({ threshold: 0.1 });
-  const [ref3, isVisible3] = useIntersectionObserver({ threshold: 0.1 });
-  const [textRef, isTextVisible] = useIntersectionObserver({ threshold: 0.1 });
-  const [imgRef, isImgVisible] = useIntersectionObserver({ threshold: 0.1 });
+  const [ref1, isVisible1] = useIntersectionObserver<HTMLDivElement>({ threshold: 0.1 });
+  const [ref2, isVisible2] = useIntersectionObserver<HTMLDivElement>({ threshold: 0.1 });
+  const [ref3, isVisible3] = useIntersectionObserver<HTMLDivElement>({ threshold: 0.1 });
+  const [textRef, isTextVisible] = useIntersectionObserver<HTMLParagraphElement>({ threshold: 0.1 });
+  const [imgRef, isImgVisible] = useIntersectionObserver<HTMLImageElement>({ threshold: 0.1 });
 
   return (
     <section className="ueber-uns" id="IDUeberUns">
       <div className="container-row1">
-        <img src="/DomejoStudiosLogoBlackTp.png" alt="" 
-        className={isImgVisible ? 'slideInLeft' : ''} 
-        ref={imgRef}/>
-        <p className={isTextVisible ? 'slideInRight' : ''} 
-          ref={textRef}>
+        <img 
+          src="/DomejoStudiosLogoBlackTp.png" 
+          alt="" 
+          className={isImgVisible ? 'slideInLeft' : ''} 
+          ref={imgRef} 
+        />
+        <p 
+          className={isTextVisible ? 'slideInRight' : ''} 
+          ref={textRef}
+        >
           Wir bauen <span>moderne Landingpages, Portfolios </span> und <span>One-Page Webseiten</span>, die Ihre Marke vollständig repräsentieren und mit <span>Ihrer Zielgruppe</span> in Resonanz stehen.
         </p>
       </div>

@@ -1,14 +1,19 @@
-import React from 'react';
 import Particles from 'react-tsparticles';
 import { loadFull } from 'tsparticles';
+import type { Engine, Container } from 'tsparticles-engine';
 
 export default function Header() {
-  const particlesInit = async (main) => {
+  // Initialization function for particles
+  const particlesInit = async (main: Engine): Promise<void> => {
     await loadFull(main);
   };
 
-  const particlesLoaded = (container) => {
+  // Updated particlesLoaded function to return a Promise<void>
+  const particlesLoaded = async (container: Container | undefined): Promise<void> => {
+    // You can still log or handle the container as needed
     console.log(container);
+    // Return a resolved Promise
+    return Promise.resolve();
   };
 
   return (

@@ -1,8 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react';
 
-const useIntersectionObserver = (options) => {
+type IntersectionObserverHookOptions = IntersectionObserverInit;
+
+const useIntersectionObserver = <T extends Element>(
+  options?: IntersectionObserverHookOptions
+): [React.RefObject<T>, boolean] => {
   const [isVisible, setIsVisible] = useState(false);
-  const elementRef = useRef(null);
+  const elementRef = useRef<T>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
