@@ -95,7 +95,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   padding: var(--spacing-xxl);
-  height: 20vh;
+  height: 15vh;
   position: fixed;
   z-index: 4;
 }
@@ -105,7 +105,7 @@ footer {
   background-color: #000000;
   border-radius: 30px;
   padding: 5px;
-  margin-top: 4rem;
+  margin-top: 8rem;
 }
 
 .nav-ul {

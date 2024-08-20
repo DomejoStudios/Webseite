@@ -12,25 +12,25 @@ import Footer from './footer.jsx'
 function App() {
   
   const slides = [
-    '/harmonyhaven1.jpg',
-    '/harmonyhaven2.jpg',
-    '/harmonyhaven3.jpg',
-    '/harmonyhaven4.jpg',
-    '/harmonyhaven5.jpg',
-    '/harmonyhaven6.jpg',
-    '/harmonyhaven8.jpg',
-    '/tastyBites1.jpg',
-    '/tastyBites2.jpg',
-    '/tastyBites4.jpg',
-    '/tastyBites5.jpg',
+    'harmonyhaven1.jpg',
+    'harmonyhaven2.jpg',
+    'harmonyhaven3.jpg',
+    'harmonyhaven4.jpg',
+    'harmonyhaven5.jpg',
+    'harmonyhaven6.jpg',
+    'harmonyhaven8.jpg',
+    'tastyBites1.jpg',
+    'tastyBites2.jpg',
+    'tastyBites4.jpg',
+    'tastyBites5.jpg',
     'ThreePointStudios.jpg',
     'ThreePointStudios2.jpg',
     'ThreePointStudios3.jpg',
     'ThreePointStudios4.jpg',
     'ThreePointStudios5.jpg',
-    '/lumina1.jpg',
-    '/lumina2.jpg',
-    '/lumina3.jpg'
+    'lumina1.jpg',
+    'lumina2.jpg',
+    'lumina3.jpg'
   ];
   
   

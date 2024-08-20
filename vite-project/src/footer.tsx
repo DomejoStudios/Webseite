@@ -4,7 +4,7 @@ export default function Footer () {
     <>
     <footer className="footer" id="IDFooter">
       <div className="footer-container1">
-        <img src="/DomejoStudiosLogoWhiteTp.png" alt="" />
+        <img src="DomejoStudiosLogoWhiteTp.png" alt="" />
       </div>
       <div className="footer-container2">
       <ul className="social-media-list">

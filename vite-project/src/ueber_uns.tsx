@@ -11,7 +11,7 @@ export default function UeberUns() {
     <section className="ueber-uns" id="IDUeberUns">
       <div className="container-row1">
         <img 
-          src="/DomejoStudiosLogoBlackTp.png" 
+          src="DomejoStudiosLogoBlackTp.png" 
           alt="" 
           className={isImgVisible ? 'slideInLeft' : ''} 
           ref={imgRef} 
