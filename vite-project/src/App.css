@@ -595,9 +595,18 @@ footer {
 @media screen and (max-width: 600px) {
 
   /* Nav */
+  .nav {
+    padding: 10px;
+  } 
+
   .logo-nav {
-    width: 140px;
-    margin-top: 5rem;
+    width: 175px;
+    margin-top: 1rem;
+    background: none;
+  }
+
+  .nav-ul {
+    background-color: transparent;
   }
   
   .nav-ul li {
@@ -606,7 +615,7 @@ footer {
   }
   
   .nav-ul li a {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
 
