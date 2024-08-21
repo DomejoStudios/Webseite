@@ -95,7 +95,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   padding: var(--spacing-xxl);
-  height: 15vh;
+  height: 20vh;
   position: fixed;
   z-index: 4;
 }
@@ -600,8 +600,8 @@ footer {
   } 
 
   .logo-nav {
-    width: 175px;
-    margin-top: 1rem;
+    width: 150px;
+    margin-top: 5rem;
     background: none;
   }
 
@@ -804,10 +804,6 @@ footer {
     justify-content: space-between;
     align-items: center;
   }
-
-  .logo-nav {
-    margin-top: 5rem;
-  }
   
   .nav-ul li {
     display: block;
@@ -912,6 +908,10 @@ footer {
   /* Nav */
   .nav {
     position: relative;
+  }
+
+  .nav-ul {
+    background-color: transparent;
   }
 }
 
